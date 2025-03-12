@@ -14,6 +14,15 @@ export const useLocale = () => {
   return context;
 };
 
+export function useLocalization() {
+  const { locale, t } = useLocale();
+  return {
+    locale,
+    t,
+    getTranslation: t
+  };
+}
+
 const translations = {
   en,
   vi

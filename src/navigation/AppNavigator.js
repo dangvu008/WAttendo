@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useContext } from "react";
-import { LanguageContext } from "../context/LanguageContext";
+import { useLocale } from "../localization";
 
 // Import screens
 import HomeScreen from "../screens/HomeScreen";
@@ -17,7 +17,7 @@ const Stack = createStackNavigator();
 // Main stack navigator
 const AppNavigator = () => {
   const { theme } = useContext(ThemeContext);
-  const { t } = useContext(LanguageContext);
+  const { t } = useLocale();
 
   return (
     <Stack.Navigator

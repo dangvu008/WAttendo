@@ -44,7 +44,7 @@ const WeekStatusGrid = () => {
       fadeAnim.setValue(0);
       scaleAnim.setValue(0.3);
     }
-  }, [detailModalVisible]);
+  }, [detailModalVisible, fadeAnim, scaleAnim]);
 
   const weeklyData = getWeeklyAttendance();
   const today = new Date();

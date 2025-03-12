@@ -227,14 +227,16 @@ export const AttendanceProvider = ({ children }) => {
           return false;
         }
         
-        // Determine if sign button should be shown (this could be based on settings or other criteria)
-        const showSignButton = Math.random() > 0.5; // Example: randomly decide for demo purposes
-        
-        return await updateTodayStatus({
-          status: STATUS_TYPES.CHECK_IN,
-          checkInTime: now.toISOString(),
-          showSignButton,
-        });
+        {
+          // Determine if sign button should be shown (this could be based on settings or other criteria)
+          const showSignButton = Math.random() > 0.5; // Example: randomly decide for demo purposes
+          
+          return await updateTodayStatus({
+            status: STATUS_TYPES.CHECK_IN,
+            checkInTime: now.toISOString(),
+            showSignButton,
+          });
+        }
 
       case STATUS_TYPES.CHECK_IN:
         // check_out → Tan Làm (Lưu thời gian chấm công ra, hiển thị thời gian ngay bên dưới)

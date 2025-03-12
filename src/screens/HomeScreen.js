@@ -57,7 +57,7 @@ const HomeScreen = () => {
       fadeAnim.setValue(0);
       scaleAnim.setValue(0.3);
     }
-  }, [confirmModalVisible]);
+  }, [confirmModalVisible, fadeAnim, scaleAnim]);
 
   const handleMultiPurposeButtonPress = async () => {
     const now = new Date();
